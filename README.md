@@ -3,12 +3,15 @@ jquerystring
 
 URL parameter getter
 
-Get easy the value of a parameter from querystring with one function.
+Get easy the value of a parameter from querystring with one function.<br/>
+<b>jquerystring_value(key, [url])</b><br/>
+where url is option, if it's not specified, the default url is taken from the address bar.
+
 exemple:
-url = "www.url.com?param1=kalsjgwoi234kljgwoegwie
-var the_value = jquerystring_value("param1");
+<pre><code>var the_url = "www.url.com?param1=kalsjgwoi234kljgwoegwie";
+var the_value = jquerystring_value("param1", the_url);
 
 document.write(the_value);
-
-will show : 
+</code></pre>
+will show :<br/>
 kalsjgwoi234kljgwoegwie
