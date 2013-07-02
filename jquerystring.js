@@ -11,10 +11,11 @@
 */
 function jquerystring( key, url )
 {
-  if ( url == null )
-  {
-    var url = window.location.search.substring(1);
-  }
+  if ( !url )
+    url = window.location.search.substring(1);
+  else if (url.indexOf('?'))
+    url = url.substring(url.indexOf('?')+1);
+
   url = url.split('&');
   for (var i = 0; i < url.length; i++) 
   {
